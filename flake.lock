@@ -56,11 +56,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1650629764,
-        "narHash": "sha256-RhRpwJxtAKIrqYbftsBzIzPGTK8o/CSoH17/78Yqwq4=",
+        "lastModified": 1650637103,
+        "narHash": "sha256-QwnE4b/kuLOkADxvo/OYtNpIMmuUfV/R1qkdwjeisCs=",
         "owner": "icetan",
         "repo": "ln-conf",
-        "rev": "65a8361f0610314b272c9be666af51acbb4910c8",
+        "rev": "b0a5989db0e44349e15f1e3643f1f8e8df4eee9f",
         "type": "github"
       },
       "original": {
