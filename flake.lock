@@ -1,0 +1,130 @@
+{
+  "nodes": {
+    "kak-lsp-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1648493455,
+        "narHash": "sha256-5sPw95lSbswIUbNIZ4mpA3WeZt7u+a5s4KxkTnN14Sw=",
+        "owner": "kak-lsp",
+        "repo": "kak-lsp",
+        "rev": "6be4b95e7169e501c0a6e786622c9277669dfaeb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kak-lsp",
+        "ref": "v12.1.0",
+        "repo": "kak-lsp",
+        "type": "github"
+      }
+    },
+    "kakoune-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1647857095,
+        "narHash": "sha256-ua8hMr3UsyVTkpTEoHg8jwjRyxAh9uwqvyY9QQE6bQA=",
+        "owner": "mawww",
+        "repo": "kakoune",
+        "rev": "eae8ea8a548ef2bf9d02d542fe58b95dfce186a5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mawww",
+        "repo": "kakoune",
+        "type": "github"
+      }
+    },
+    "lmt-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1619009341,
+        "narHash": "sha256-6/jDh5dfpFAhOspKto2hB8TTSjjh++GkQWjRBaFrYZg=",
+        "owner": "driusan",
+        "repo": "lmt",
+        "rev": "62fe18f2f6a6e11c158ff2b2209e1082a4fcd59c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "driusan",
+        "repo": "lmt",
+        "type": "github"
+      }
+    },
+    "ln-conf": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1650369317,
+        "narHash": "sha256-xBIZkLUs9ysCG5+6kXiQLsu+Y+NwgraD8BMqQuuRVWE=",
+        "owner": "icetan",
+        "repo": "ln-conf",
+        "rev": "144d5d5fcb43fa1037dc84e10bed914743a9056e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "icetan",
+        "repo": "ln-conf",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1648219316,
+        "narHash": "sha256-Ctij+dOi0ZZIfX5eMhgwugfvB+WZSrvVNAyAuANOsnQ=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "30d3d79b7d3607d56546dd2a6b49e156ba0ec634",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "pairon-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1608114862,
+        "narHash": "sha256-DWFNhB65Neoywk0QoGkJVOAXKmFy0z4gTmFTE46aGRk=",
+        "owner": "icetan",
+        "repo": "pairon",
+        "rev": "e951d32a362ff6f74d993b4e2044c2543b2e5fa7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "icetan",
+        "repo": "pairon",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "kak-lsp-src": "kak-lsp-src",
+        "kakoune-src": "kakoune-src",
+        "lmt-src": "lmt-src",
+        "ln-conf": "ln-conf",
+        "nixpkgs": "nixpkgs",
+        "pairon-src": "pairon-src",
+        "utils": "utils"
+      }
+    },
+    "utils": {
+      "locked": {
+        "lastModified": 1648297722,
+        "narHash": "sha256-W+qlPsiZd8F3XkzXOzAoR+mpFqzm3ekQkJNa+PIh1BQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "0f8662f1319ad6abf89b3380dd2722369fc51ade",
+        "type": "github"
+      },
+      "original": {
+        "id": "flake-utils",
+        "type": "indirect"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
