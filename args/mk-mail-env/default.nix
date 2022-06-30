@@ -7,7 +7,11 @@ with pkgs;
 let
   inherit (pkgs.lib) optional findFirst;
 
-  mkMailEnv = { name, accounts }:
+  mkMailEnv =
+    { name
+    , accounts
+    , withAerc ? false
+    }:
     let
       mkUtils = callPackage ./utils.nix { };
       mkMuttrc = callPackage ./mutt { };
@@ -39,13 +43,14 @@ let
           paths = [ neomutt ];
         };
 
-      aercEnv = {
-        paths = [
-          aerc
-          w3m
-          dante
-        ];
-      };
+      optionalAercEnv = optional withAerc
+        {
+          paths = [
+            aerc
+            w3m
+            dante
+          ];
+        };
 
       extraEnv = {
         paths = [
@@ -59,10 +64,10 @@ let
         utilsEnv
         msmtpEnv
         isyncEnv
-        aercEnv
         extraEnv
       ]
-      ++ optionalMuttEnv;
+      ++ optionalMuttEnv
+      ++ optionalAercEnv;
     in
     (ln-conf.mkEnv "${name}-mail-env" envs) // {
       inherit accounts;
