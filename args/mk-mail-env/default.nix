@@ -28,7 +28,7 @@ let
       };
 
       msmtpEnv = {
-        links."$XDG_CONFIG_HOME/msmtp/config" = "${mkMsmtprc accounts}/etc/msmtprc";
+        links."$HOME/.config/msmtp/config" = "${mkMsmtprc accounts}/etc/msmtprc";
         paths = [ msmtp ];
       };
 
@@ -39,7 +39,7 @@ let
 
       optionalMuttEnv = optional (defaultOutlookAccount != null)
         {
-          links."$XDG_CONFIG_HOME/neomutt/muttrc" = "${mkMuttrc defaultOutlookAccount}/etc/muttrc";
+          links."$HOME/.config/neomutt/muttrc" = "${mkMuttrc defaultOutlookAccount}/etc/muttrc";
           paths = [ neomutt ];
         };
 
