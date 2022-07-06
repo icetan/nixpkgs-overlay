@@ -9,6 +9,7 @@ let
       patchShebangs $out/bin
     '';
 in rec {
+  bakemd = import ./bakemd { pkgs = self; };
   update-deps = writeScriptBin "update-deps" ''
     #!${dash}/bin/dash
     set -e
