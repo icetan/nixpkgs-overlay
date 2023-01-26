@@ -1,9 +1,10 @@
 {
   inputs = {
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/release-22.05";
+
     nixpkgs.url = "nixpkgs";
 
     utils.url = "flake-utils";
-    #utils.inputs.nixpkgs.follows = "nixpkgs";
 
     ln-conf.url = "github:icetan/ln-conf";
     ln-conf.inputs.nixpkgs.follows = "nixpkgs";
@@ -23,16 +24,23 @@
     nil.url = "github:oxalica/nil";
   };
 
-  outputs = { self, utils, nixpkgs, nil, ... }@inputs:
+  outputs = { self, utils, nixpkgs, nixpkgs-stable, nil, ... }@inputs:
     let
+      stable-overlay = final: prev: let
+        pkgs = import nixpkgs-stable { inherit (prev) system; };
+      in {
+        inherit (pkgs) khal;
+      };
       legacy-overlay = import ./overlays/util;
-      pkgs-overlay = final: prev: (import ./args {
+      pkgs-overlay = final: prev: (import ./args rec {
         inherit (prev) system;
         inherit inputs;
         pkgs = prev;
+        #pkgs-stable = import nixpkgs-stable { inherit system; };
       }).packages;
 
       overlays = [
+        stable-overlay
         legacy-overlay
         pkgs-overlay
       ];

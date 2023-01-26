@@ -3,8 +3,8 @@
 , ...
 }:
 
-with pkgs;
 let
+  inherit (pkgs) callPackage;
   inherit (pkgs.lib) optional findFirst;
 
   mkMailEnv =
@@ -24,12 +24,12 @@ let
 
       isyncEnv = {
         links."$HOME/.mbsyncrc" = "${mkMbsyncrc accounts}/etc/mbsyncrc";
-        paths = [ isync ];
+        paths = with pkgs; [ isync ];
       };
 
       msmtpEnv = {
         links."$HOME/.config/msmtp/config" = "${mkMsmtprc accounts}/etc/msmtprc";
-        paths = [ msmtp ];
+        paths = with pkgs; [ msmtp ];
       };
 
       defaultOutlookAccount = findFirst
@@ -40,12 +40,12 @@ let
       optionalMuttEnv = optional (defaultOutlookAccount != null)
         {
           links."$HOME/.config/neomutt/muttrc" = "${mkMuttrc defaultOutlookAccount}/etc/muttrc";
-          paths = [ neomutt ];
+          paths = with pkgs; [ neomutt ];
         };
 
       optionalAercEnv = optional withAerc
         {
-          paths = [
+          paths = with pkgs; [
             aerc
             w3m
             dante
@@ -53,11 +53,9 @@ let
         };
 
       extraEnv = {
-        paths = [
-          mu
-          khal
-          vdirsyncer
-        ];
+        paths = builtins.attrValues {
+          inherit (pkgs) mu vdirsyncer khal;
+        };
       };
 
       envs = [

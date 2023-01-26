@@ -13,7 +13,6 @@ let
     inherit pkgs;
 
     ln-conf = inputs.ln-conf.packages.${system}.default;
-    #icetan-nix = inputs.icetan-nix.packages.${system}.nix;
     nil = inputs.nil.packages.${system}.nil;
 
     optinalAttrs = pkgs.lib.optinalAttrs;
@@ -30,7 +29,7 @@ let
     mkMailEnv = import ./mk-mail-env args;
 
     packages = packages // {
-      inherit (args) mkMailEnv; # icetan-nix;
+      inherit (args) mkMailEnv;
     };
   };
 in
