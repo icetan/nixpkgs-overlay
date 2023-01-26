@@ -3,7 +3,7 @@
     nixpkgs.url = "nixpkgs";
 
     utils.url = "flake-utils";
-    utils.inputs.nixpkgs.follows = "nixpkgs";
+    #utils.inputs.nixpkgs.follows = "nixpkgs";
 
     ln-conf.url = "github:icetan/ln-conf";
     ln-conf.inputs.nixpkgs.follows = "nixpkgs";
@@ -19,23 +19,34 @@
 
     lmt-src.url = "github:driusan/lmt";
     lmt-src.flake = false;
+
+    nil.url = "github:oxalica/nil";
   };
 
-  outputs = { self, utils, nixpkgs, ... }@inputs:
-    utils.lib.eachDefaultSystem (system:
-      let
-        overlay-legacy = import ./overlays/util;
-        overlay = final: prev: (import ./args {
-          inherit system;
-          inherit inputs;
-          pkgs = prev;
-        }).packages;
+  outputs = { self, utils, nixpkgs, nil, ... }@inputs:
+    let
+      legacy-overlay = import ./overlays/util;
+      pkgs-overlay = final: prev: (import ./args {
+        inherit (prev) system;
+        inherit inputs;
+        pkgs = prev;
+      }).packages;
 
-        overlays = [ overlay-legacy overlay ];
+      overlays = [
+        legacy-overlay
+        pkgs-overlay
+      ];
 
+      overlays' = {
+        overlays = rec {
+          all = final: prev: builtins.foldl' (acc: o: acc // o final prev) { } overlays;
+          default = all;
+        };
+      };
+
+      systems = utils.lib.eachDefaultSystem (system: {
         legacyPackages = import nixpkgs { inherit system overlays; };
-      in
-      {
-        inherit legacyPackages overlays;
       });
+    in
+    systems // overlays';
 }
