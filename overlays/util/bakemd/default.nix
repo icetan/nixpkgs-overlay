@@ -16,7 +16,7 @@ pkgs.writeShellApplication {
     Arguments:
 
       FILE    A Markdown text file
-      THEME   A preset theme (default, github)
+      THEME   A preset theme (default, github, cv)
     EOF
       exit 1
     }
@@ -39,7 +39,7 @@ pkgs.writeShellApplication {
       -f gfm -t html5 \
       --metadata pagetitle="$title" \
       --css "$theme" \
-      --self-contained \
+      --embed-resources --standalone \
       <(SB_STYLE=md src-block "$file")
   '';
 }
