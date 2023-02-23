@@ -9,12 +9,6 @@
     ln-conf.url = "github:icetan/ln-conf";
     ln-conf.inputs.nixpkgs.follows = "nixpkgs";
 
-    kakoune-src.url = "github:mawww/kakoune";
-    kakoune-src.flake = false;
-
-    kak-lsp-src.url = "github:kak-lsp/kak-lsp/v12.1.0";
-    kak-lsp-src.flake = false;
-
     pairon-src.url = "github:icetan/pairon";
     pairon-src.flake = false;
 

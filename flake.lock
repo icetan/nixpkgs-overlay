@@ -15,39 +15,6 @@
         "type": "github"
       }
     },
-    "kak-lsp-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1648493455,
-        "narHash": "sha256-5sPw95lSbswIUbNIZ4mpA3WeZt7u+a5s4KxkTnN14Sw=",
-        "owner": "kak-lsp",
-        "repo": "kak-lsp",
-        "rev": "6be4b95e7169e501c0a6e786622c9277669dfaeb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kak-lsp",
-        "ref": "v12.1.0",
-        "repo": "kak-lsp",
-        "type": "github"
-      }
-    },
-    "kakoune-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1668981081,
-        "narHash": "sha256-kpPbnXkRUXtOqI9Feqvhw5OSTiBN1ZOKr7K6N7poNvQ=",
-        "owner": "mawww",
-        "repo": "kakoune",
-        "rev": "760a45556cfb8f50813ce8d1712a0a23f86dcf52",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mawww",
-        "repo": "kakoune",
-        "type": "github"
-      }
-    },
     "lmt-src": {
       "flake": false,
       "locked": {
@@ -168,8 +135,6 @@
     },
     "root": {
       "inputs": {
-        "kak-lsp-src": "kak-lsp-src",
-        "kakoune-src": "kakoune-src",
         "lmt-src": "lmt-src",
         "ln-conf": "ln-conf",
         "nil": "nil",
