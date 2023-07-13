@@ -15,6 +15,38 @@
         "type": "github"
       }
     },
+    "kak-lsp-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1681679713,
+        "narHash": "sha256-HRVSZSZ5prmB3dXBXSlrdFuXcKUkNa81F/tQY73poZM=",
+        "owner": "kak-lsp",
+        "repo": "kak-lsp",
+        "rev": "39dcd5a64aaa2eb37936226c8b7e80dbd2d78994",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kak-lsp",
+        "repo": "kak-lsp",
+        "type": "github"
+      }
+    },
+    "kak-tree-sitter-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1689007521,
+        "narHash": "sha256-cphVpheUT4Qt3MkrappS3jyzFL6JARjEDYLqodpwwk4=",
+        "owner": "phaazon",
+        "repo": "kak-tree-sitter",
+        "rev": "f0c6fdb75adfdfe0efca9b9815cddc90313c98d0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "phaazon",
+        "repo": "kak-tree-sitter",
+        "type": "github"
+      }
+    },
     "lmt-src": {
       "flake": false,
       "locked": {
@@ -51,10 +83,28 @@
         "type": "github"
       }
     },
+    "naersk": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1688534083,
+        "narHash": "sha256-/bI5vsioXscQTsx+Hk9X5HfweeNZz/6kVKsbdqfwW7g=",
+        "owner": "nix-community",
+        "repo": "naersk",
+        "rev": "abca1fb7a6cfdd355231fc220c3d0302dbb4369a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "naersk",
+        "type": "github"
+      }
+    },
     "nil": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "rust-overlay": "rust-overlay"
       },
       "locked": {
@@ -73,17 +123,31 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1667669848,
-        "narHash": "sha256-nD2dk2A+1zUlUT18ppDFVWwimi26+ultc2QRsulQwQ8=",
-        "owner": "nixos",
+        "lastModified": 1687011986,
+        "narHash": "sha256-ZNSi/wBw12d7LO8YcZ4aehIlPp4lgSkKbrHaoF80IKI=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1f3ebb2bd1a353a42e8f833895c26d8415c7b791",
+        "rev": "2c09e8eb8717e240ef9c5727c1cc9186db9fb309",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs-mozilla": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1687771476,
+        "narHash": "sha256-TSpqz6qYVRoqkEdOCawEQ4/cWt/4pracmvw17HK1tgE=",
+        "owner": "mozilla",
+        "repo": "nixpkgs-mozilla",
+        "rev": "3a44b8783514e7d6db4b63df96071b6c2b014b07",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mozilla",
+        "repo": "nixpkgs-mozilla",
         "type": "github"
       }
     },
@@ -105,11 +169,27 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1674487464,
-        "narHash": "sha256-Jgq50e4S4JVCYpWLqrabBzDp/1mfaxHCh8/OOorHTy0=",
+        "lastModified": 1667669848,
+        "narHash": "sha256-nD2dk2A+1zUlUT18ppDFVWwimi26+ultc2QRsulQwQ8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "1f3ebb2bd1a353a42e8f833895c26d8415c7b791",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1681753173,
+        "narHash": "sha256-MrGmzZWLUqh2VstoikKLFFIELXm/lsf/G9U9zR96VD4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3954218cf613eba8e0dcefa9abe337d26bc48fd0",
+        "rev": "0a4206a51b386e5cda731e8ac78d76ad924c7125",
         "type": "github"
       },
       "original": {
@@ -135,10 +215,14 @@
     },
     "root": {
       "inputs": {
+        "kak-lsp-src": "kak-lsp-src",
+        "kak-tree-sitter-src": "kak-tree-sitter-src",
         "lmt-src": "lmt-src",
         "ln-conf": "ln-conf",
+        "naersk": "naersk",
         "nil": "nil",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
+        "nixpkgs-mozilla": "nixpkgs-mozilla",
         "nixpkgs-stable": "nixpkgs-stable",
         "pairon-src": "pairon-src",
         "utils": "utils"

@@ -8,25 +8,23 @@ body {
   width: 640px;
   max-width: 99%;
   box-sizing: border-box;
-  margin: 30px auto 8rem auto;
+  margin: 32px auto 8rem auto;
+  padding: 0 32px;
+  font-size: 13pt;
 }
 
-header {
-  display: grid;
-  justify-content: space-between;
-  margin: 4em 0;
+header + * {
+  clear: both;
 }
 header img {
-  height: 12em;
+  max-width: 13em;
 }
-header > *:first-child {
-  grid-column: 1;
-  grid-row: 1;
+header > * {
+  margin: 0 0 4em 0;
+  float: left;
+  min-width: 288px;
 }
-header > *:last-child {
-  grid-column: 2;
-  grid-row: 1;
-}
+
 
 a{ color: #0645ad; }
 a:hover{ color: #06e; }
@@ -126,7 +124,7 @@ h2{
 
 @page {
   size: A4;
-  margin: 12mm 24mm 12mm 24mm;
+  /* margin: 12mm 18mm 12mm 18mm; */
 }
 
 @media print {
