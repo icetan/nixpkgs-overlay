@@ -19,8 +19,6 @@
     lmt-src.url = "github:driusan/lmt";
     lmt-src.flake = false;
 
-    nil.url = "github:oxalica/nil";
-
     kak-lsp-src.url = "github:kak-lsp/kak-lsp";
     kak-lsp-src.flake = false;
 
@@ -28,7 +26,7 @@
     kak-tree-sitter-src.flake = false;
   };
 
-  outputs = { self, utils, nixpkgs, nixpkgs-stable, nixpkgs-mozilla, nil, ... }@inputs:
+  outputs = { self, utils, nixpkgs, nixpkgs-stable, nixpkgs-mozilla, ... }@inputs:
     let
       stable-overlay = final: prev: let
         pkgs = import nixpkgs-stable { inherit (prev) system; };

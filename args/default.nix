@@ -13,7 +13,6 @@ let
     inherit pkgs;
 
     ln-conf = inputs.ln-conf.packages.${system}.default;
-    nil = inputs.nil.packages.${system}.nil;
 
     optinalAttrs = pkgs.lib.optinalAttrs;
     hasPrefix = pkgs.lib.hasPrefix;
