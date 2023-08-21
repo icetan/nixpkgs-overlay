@@ -22,10 +22,10 @@ Overlaying another `nixpkgs` version:
   inputs.nixpkgs = "github:nixos/nixpkgs";
 
   outputs = { self, icetan-overlay, nixpkgs, ... }:
-    ... 
+    ...
     pkgs = import nixpkgs {
       inherit system;
-      inherit (icetan-overlay) overlays;
+      overlays = icetan-overlay.overlays.default;
     };
     ...
 }
