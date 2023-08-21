@@ -25,5 +25,6 @@ pkgs.callPackage ({ stdenv, lib, naersk, rust }:
   inherit (pkgs.rustChannelOf {
     channel = "nightly";
     sha256 = "sha256-HEiNGMs5Nevdu67+nUOZjSsTUrbMFn+nePQ1RQEMqKI=";
+    date = "2023-07-13";
   }) rust;
 }
