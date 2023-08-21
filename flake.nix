@@ -49,16 +49,11 @@
         pkgs-overlay
       ];
 
-      overlays' = {
-        overlays = rec {
-          all = final: prev: builtins.foldl' (acc: o: acc // o final prev) { } overlays;
-          default = all;
-        };
-      };
-
       systems = utils.lib.eachDefaultSystem (system: {
         legacyPackages = import nixpkgs { inherit system overlays; };
       });
     in
-    systems // overlays';
+    systems // {
+      overlays.default = overlays;
+    };
 }
