@@ -14,12 +14,12 @@ pkgs.callPackage ({ stdenv, lib, naersk, rust }:
 
   #buildInputs = lib.optionals stdenv.isDarwin [ Security SystemConfiguration ];
 
-  #meta = with lib; {
-  #  description = "Kakoune Language Server Protocol Client";
-  #  homepage = "https://github.com/kak-lsp/kak-lsp";
-  #  license = with licenses; [ unlicense /* or */ mit ];
-  #  maintainers = [ maintainers.spacekookie ];
-  #};
+  meta = with lib; {
+    description = "Syntax hilighting in Kakoune using tree-sitter";
+    homepage = "https://github.com/phaazon/kak-tree-sitter";
+    license = with licenses; [ unlicense ];
+    # maintainers = [ ];
+  };
 }) {
   inherit (inputs) naersk;
   inherit (pkgs.rustChannelOf {

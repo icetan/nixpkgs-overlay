@@ -19,6 +19,9 @@
     lmt-src.url = "github:driusan/lmt";
     lmt-src.flake = false;
 
+    kakoune-src.url = "github:mawww/kakoune";
+    kakoune-src.flake = false;
+
     kak-lsp-src.url = "github:kak-lsp/kak-lsp";
     kak-lsp-src.flake = false;
 
