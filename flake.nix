@@ -25,7 +25,7 @@
     kak-lsp-src.url = "github:kak-lsp/kak-lsp";
     kak-lsp-src.flake = false;
 
-    kak-tree-sitter-src.url = "github:phaazon/kak-tree-sitter";
+    kak-tree-sitter-src.url = "github:phaazon/kak-tree-sitter/kak-tree-sitter-v0.4.5";
     kak-tree-sitter-src.flake = false;
   };
 

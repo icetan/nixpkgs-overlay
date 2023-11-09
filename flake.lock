@@ -19,15 +19,16 @@
     "kak-tree-sitter-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1694378399,
-        "narHash": "sha256-B0NOoQ41D8LLo1QCDLTD5d/eyaYy3LbYH7qbyYeGlHA=",
+        "lastModified": 1694286346,
+        "narHash": "sha256-ZsTlFCXw29lfJA3uYoEhox2n1ZtsFTQkSlKoQUN5P8w=",
         "owner": "phaazon",
         "repo": "kak-tree-sitter",
-        "rev": "2cb7898880ffa63e952662ff6f574f55c6e29fff",
+        "rev": "e247bbaf7241936015680462fd154c56255d3236",
         "type": "github"
       },
       "original": {
         "owner": "phaazon",
+        "ref": "kak-tree-sitter-v0.4.5",
         "repo": "kak-tree-sitter",
         "type": "github"
       }
