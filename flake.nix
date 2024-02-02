@@ -2,9 +2,10 @@
   inputs = {
     nixpkgs-stable.url = "github:NixOS/nixpkgs/release-22.05";
 
-    nixpkgs.url = "nixpkgs";
+    nixpkgs.url = "github:NixOS/nixpkgs";
 
     utils.url = "flake-utils";
+    utils.inputs.nixpkgs.follows = "nixpkgs";
     naersk.url = "github:nix-community/naersk";
 
     nixpkgs-mozilla.url = "github:mozilla/nixpkgs-mozilla";

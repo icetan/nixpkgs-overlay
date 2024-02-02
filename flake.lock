@@ -151,27 +151,28 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1692494774,
-        "narHash": "sha256-noGVoOTyZ2Kr5OFglzKYOX48cx3hggdCPbXrYMG2FDw=",
+        "lastModified": 1706881012,
+        "narHash": "sha256-RyVCPfCp7ZDg7C+3GzJtvDuARfEZnk+NthAPVPf/CWQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3476a10478587dec90acb14ec6bde0966c545cc0",
+        "rev": "5716841359b49ae064b982acb81861950a915c41",
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "pairon-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1694599547,
-        "narHash": "sha256-6gRuZEUaAcmN4Zt9ZGsoghhBoELOA/q9YFPyodfnIoo=",
-        "owner": "icetan",
-        "repo": "pairon",
-        "rev": "5bfbe739bf59704a4ad4eca3b5c954e56f6cde67",
-        "type": "github"
+        "dirtyRev": "5ec16c35cb4ca67610de41d7eae70507493e29d1-dirty",
+        "dirtyShortRev": "5ec16c3-dirty",
+        "lastModified": 1706866811,
+        "narHash": "sha256-iVqlNOp7BPhYOaUJ2wr92T6wHxogpMqtpbt19GwFbKc=",
+        "type": "git",
+        "url": "file:///home/icetan/src/icetan/pairon"
       },
       "original": {
         "owner": "icetan",

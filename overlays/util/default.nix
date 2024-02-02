@@ -61,4 +61,11 @@ in rec {
     git -C ~/.password-store commit -m "Update submodules" -a
     git -C ~/.password-store push --recurse-submodules=on-demand
   '';
+
+  qr = writeScriptBin "qr" ''
+    #!${dash}/bin/dash
+    set -e
+    head -n1 | tr -d '\n' | ${qrencode}/bin/qrencode -m 2 -t utf8
+  '';
+
 }
