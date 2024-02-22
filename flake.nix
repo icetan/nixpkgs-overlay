@@ -11,6 +11,9 @@
     nixpkgs-mozilla.url = "github:mozilla/nixpkgs-mozilla";
     nixpkgs-mozilla.flake = false;
 
+    poetry2nix.url = "github:nix-community/poetry2nix";
+    poetry2nix.inputs.nixpkgs.follows = "nixpkgs";
+
     ln-conf.url = "github:icetan/ln-conf";
     ln-conf.inputs.nixpkgs.follows = "nixpkgs";
 

@@ -26,10 +26,13 @@ let
     importDirs = import ./import-dirs args;
 
     mkMailEnv = import ./mk-mail-env args;
+    pythonpkgs = import ../pkgs/pythonpkgs args;
 
-    packages = packages // {
+    packages = packages
+    // {
       inherit (args) mkMailEnv;
-    };
+    }
+    // args.pythonpkgs;
   };
 in
 args

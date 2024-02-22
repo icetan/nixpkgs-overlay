@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "pythonpkgs"
+version = "0.1.0"
+description = ""
+authors = ["Christopher Fredén <me@icetan.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "=3.11.*"
+aider-chat = "^0.24.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
