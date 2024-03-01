@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs";
 
     utils.url = "flake-utils";
-    utils.inputs.nixpkgs.follows = "nixpkgs";
+    # utils.inputs.nixpkgs.follows = "nixpkgs";
     naersk.url = "github:nix-community/naersk";
 
     nixpkgs-mozilla.url = "github:mozilla/nixpkgs-mozilla";

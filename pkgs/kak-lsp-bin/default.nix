@@ -3,10 +3,10 @@
 }:
 
 let
-  version = "14.2.0";
+  version = "16.0.0";
   tarball = builtins.fetchurl {
-    url = "https://github.com/kak-lsp/kak-lsp/releases/download/v${version}/kak-lsp-v14.2.0-x86_64-unknown-linux-musl.tar.gz";
-    sha256 = "1v2qh4d9frms9lr72ik1mz46hnnly9nqnvlmvyn4i08rbsg8g87l";
+    url = "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v${version}/kakoune-lsp-v${version}-x86_64-unknown-linux-musl.tar.gz";
+    sha256 = "04f2ps8b4p2p0cc71d38ywx116p04laaiynsmhhz423mxqys03cs";
   };
 in
 pkgs.runCommand "kak-lsp-bin" {
