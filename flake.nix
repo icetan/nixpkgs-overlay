@@ -56,8 +56,9 @@
         pkgs-overlay
       ];
 
-      systems = utils.lib.eachDefaultSystem (system: {
+      systems = utils.lib.eachDefaultSystem (system: rec {
         legacyPackages = import nixpkgs { inherit system overlays; };
+        packages = legacy-overlay legacyPackages legacyPackages;
       });
     in
     systems // {

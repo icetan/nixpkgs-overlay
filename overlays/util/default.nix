@@ -68,4 +68,9 @@ in rec {
     head -n1 | tr -d '\n' | ${qrencode}/bin/qrencode -m 2 -t utf8
   '';
 
+  pacman-undo = mkBin {
+    name = "pacman-undo";
+    script = ./pacman-undo;
+    buildInputs = [ ruby ];
+  };
 }
