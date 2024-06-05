@@ -13,6 +13,7 @@ let
     inherit pkgs;
 
     ln-conf = inputs.ln-conf.packages.${system}.default;
+    zink = inputs.zink.packages.${system}.default;
 
     optinalAttrs = pkgs.lib.optinalAttrs;
     hasPrefix = pkgs.lib.hasPrefix;
@@ -30,7 +31,7 @@ let
 
     packages = packages
     // {
-      inherit (args) mkMailEnv;
+      inherit (args) mkMailEnv zink;
     }
     // args.pythonpkgs;
   };

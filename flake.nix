@@ -20,6 +20,8 @@
     pairon-src.url = "github:icetan/pairon";
     pairon-src.flake = false;
 
+    zink.url = "github:icetan/zink";
+
     lmt-src.url = "github:driusan/lmt";
     lmt-src.flake = false;
 

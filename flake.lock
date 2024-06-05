@@ -203,6 +203,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1717111066,
+        "narHash": "sha256-3lK95ALr5/0GZhsRI7XZgTKFg5HmMIi7xn/8fHuQvKk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0f1a94c815595e1bb4143368d407b2ceb0618931",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-24.05-small",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "pairon-src": {
       "flake": false,
       "locked": {
@@ -256,7 +272,8 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "pairon-src": "pairon-src",
         "poetry2nix": "poetry2nix",
-        "utils": "utils"
+        "utils": "utils",
+        "zink": "zink"
       }
     },
     "systems": {
@@ -339,6 +356,24 @@
       "original": {
         "id": "flake-utils",
         "type": "indirect"
+      }
+    },
+    "zink": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1717422295,
+        "narHash": "sha256-6H5KKjOlUhzaGDINxP//m8d7hd//l1z6wKQ8TqkXWsM=",
+        "owner": "icetan",
+        "repo": "zink",
+        "rev": "ace481081a57dc7a6f0572fd9f5a37019254366c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "icetan",
+        "repo": "zink",
+        "type": "github"
       }
     }
   },
