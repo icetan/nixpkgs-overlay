@@ -25,7 +25,10 @@ pkgs.writeShellApplication {
       usage "Wrong number of arguments"
     fi
 
-    file="$1"
+    file="''${1:-/dev/stdin}"
+    if [[ $file = '-' ]]; then file=/dev/stdin; fi
+    file_content=$(cat "$file")
+
     theme_name="''${2:-default}"
     theme="${./.}/$theme_name.css"
 
@@ -33,13 +36,13 @@ pkgs.writeShellApplication {
       usage "No theme '$theme_name'"
     fi
 
-    title=$(sed -n 's/^##* \{1,\}//p' "$file" | head -n1)
+    title=$(sed -n 's/^##* \{1,\}//p' <<<"$file_content" | head -n1)
 
     pandoc \
       -f gfm -t html5 \
       --metadata pagetitle="$title" \
       --css "$theme" \
       --embed-resources --standalone \
-      <(SB_STYLE=md src-block "$file")
+      <(SB_STYLE=md src-block <<<"$file_content")
   '';
 }

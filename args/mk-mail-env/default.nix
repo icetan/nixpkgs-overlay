@@ -47,8 +47,9 @@ let
         {
           paths = with pkgs; [
             aerc
-            w3m
-            dante
+            elinks
+            bakemd
+            # dante  # socksify <exec> # use to prevent <exec> using a internet connection
           ];
         };
 
