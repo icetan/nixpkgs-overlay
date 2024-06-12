@@ -3,13 +3,13 @@
 }:
 
 let
-  version = "16.0.0";
+  version = "17.0.1";
   tarball = builtins.fetchurl {
     url = "https://github.com/kakoune-lsp/kakoune-lsp/releases/download/v${version}/kakoune-lsp-v${version}-x86_64-unknown-linux-musl.tar.gz";
-    sha256 = "04f2ps8b4p2p0cc71d38ywx116p04laaiynsmhhz423mxqys03cs";
+    sha256 = "1pqii40g3rxva0kxi3rgq3a914s3kx82s59ypchw2a5asgwp2yaa";
   };
 in
-pkgs.runCommand "kak-lsp-bin" {
+pkgs.runCommand "kak-lsp-bin-${version}" {
   inherit version;
   # meta = with pkgs.lib; {
   #   description = "Kakoune Language Server Protocol Client";

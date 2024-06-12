@@ -7,10 +7,10 @@ pkgs.callPackage ({ stdenv, lib, fetchFromGitHub, rustPlatform, Security, System
 
 rustPlatform.buildRustPackage {
   pname = "kak-lsp";
-  version = "14.2.0";
+  version = "17.0.1";
 
   src = inputs.kak-lsp-src;
-  cargoSha256 = "sha256-cFBHoasdKplJO6juytAQQemqMZ+6ry+I/PjqIm+DIYY=";
+  cargoSha256 = "sha256-cFBHoasdKxlJO6juytAQQemqMZ+6ry+I/PjqIm+DIYY=";
 
   #src = fetchFromGitHub {
   #  owner = pname;
